@@ -114,7 +114,7 @@ const movieTemplate = movieDetail => {
   const imdbVotes = parseFloat(
     movieDetail.imdbVotes.replace(/,/g, "")
   );
-
+  const imgSrc = movieDetail.Poster === 'N/A' ? 'images.png' : movieDetail.Poster;
   const awards = movieDetail.Awards.split(" ").reduce((prev, word) => {
     const value = parseInt(word)
 
